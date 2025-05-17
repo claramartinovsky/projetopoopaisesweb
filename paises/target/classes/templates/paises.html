@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Países</title>
+    <link rel="stylesheet" href="/css/style.css?v=123">
+</head>
+<body>
+<h1>Lista de Países</h1>
+<form method="get" action="/paises">
+    <label>Filtrar por continente:</label>
+    <select name="continent">
+        <option value="">Todos</option>
+        <option th:each="c : ${continents}"
+                th:value="${c.name()}"
+                th:text="${c}"
+                th:selected="${selectedContinent == c.name()}">
+        </option>
+    </select>
+    <label>Ordenar por:</label>
+    <select name="sortBy">
+        <option value="name" th:selected="${sortBy == 'name'}">Nome</option>
+        <option value="capital" th:selected="${sortBy == 'capital'}">Capital</option>
+        <option value="continent" th:selected="${sortBy == 'continent'}">Continente</option>
+    </select>
+    <button type="submit">Aplicar</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Bandeira</th>
+        <th>Nome</th>
+        <th>Capital</th>
+        <th>Continente</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pais : ${paises}">
+        <td><img th:src="${pais.flagUrl}" alt="Bandeira" width="60"/></td>
+        <td th:text="${pais.name}"></td>
+        <td th:text="${pais.capital}"></td>
+        <td th:text="${pais.continent}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

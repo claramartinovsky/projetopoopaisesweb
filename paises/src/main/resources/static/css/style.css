@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e91e63;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #e91e63;
+    background-color: #f8bbd0;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #e91e63;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8bbd0;
+}
+
+tr:hover {
+    background-color: #f48fb1;
+}
+
+img {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 100%;
+        max-width: none;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 14px;
+    }
+
+    img {
+        width: 50px;
+    }
+}
